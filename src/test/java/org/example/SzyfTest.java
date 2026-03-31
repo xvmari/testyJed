@@ -13,12 +13,12 @@ class SzyfTest {
 
     @Test
     void testszyfrujCezaremJezeliZawijane(){
-        Assertions.assertEquals("abc", Szyf.szyfrujCezarem("def", 3));
+        Assertions.assertEquals("abc", Szyf.szyfrujCezarem("xyz", 3));
     }
 
     @Test
     void testszyfrujCezaremOdszyfrowanie() {
-        Assertions.assertEquals("abc", Szyf.szyfrujCezarem("xyz", 3));
+        Assertions.assertEquals("abc", Szyf.szyfrujCezarem("def                                                                                    ", -3));
     }
     @Test
     void testszyfrujCezaremKluczDluzszyOdAlfabetu() {
