@@ -6,7 +6,14 @@ public class Szyf {
         String zaszyfrowane = "";
         klucz = klucz%26;
         String alfabet = "abcdefghijklmnopqrstuwxyz";
-        String alfabetPrzesuniety = alfabet.substring(klucz) + alfabet.substring(0, klucz);
+        String alfabetPrzesuniety;
+        if(klucz > 0){
+            alfabetPrzesuniety = alfabet.substring(klucz) + alfabet.substring(0, klucz);
+        } else{
+            klucz =- klucz;
+            alfabetPrzesuniety = alfabet.substring(alfabet.length()-klucz) + alfabet.substring(0, alfabet.length()-klucz);
+        }
+
         for (int i = 0; i < slowoSzyfrowania.length(); i++) {
             char litera = slowoSzyfrowania.charAt(i);
             if (litera == ' '){
